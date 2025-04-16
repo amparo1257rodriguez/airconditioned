@@ -1,0 +1,897 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+(function() {
+
+	var prods = {};
+	
+	function addProduct(prod) {
+		if(prod.id && prod.price) {
+			if(prod.price.usa && prod.price.canada && prod.price.arizona && prod.price.australia && prod.price.world) {
+				prod.id = prod.id.toLowerCase();
+				prods[prod.id] = prod;
+			}
+		}
+	}
+	
+	
+/**********************************************************************************
+*
+*
+*		START EDITING HERE to Add Products
+		
+		+ To add a product, add a block like this, with the appropriate values
+		
+		addProduct({
+			'id': 'mw1',			//  <- This is the model number of the product.  It must be different from all other products.
+									// Note that the model number is in single quotes.  This is required for the script to function.
+									
+			'price': {				//	Now we'll add the prices.  Note the prices themsleves don't have to be quoted like the model number does.
+				'usa':297,		//  <- This is the price in the Lower 48 States
+				'canada':337,		//  <- This is the price in Canada, Alaska, etc.
+				'arizona':323.88,	//  <- This is the price in Arizona, with sales tax.
+				'australia':376,	//  <- This is the price in Australia
+				'world':427 (no comma)		//  <- This is the price Everywhere else, (no comma)
+				
+			}	
+		});
+
+
+		+ To remove a product, find the block like the one above that has the correct model number and delete it.
+		
+		+ To change a price, find the block with the model number of the item you want to change and change the appropiate price.
+		
+		
+*
+*
+*********************************************************************************/
+	
+	
+	addProduct({
+		'id': 'mw1',
+		'price': {
+			'usa':297,
+			'canada':347,
+			'arizona':323.88,
+			'australia':376,
+			'world':427
+		}	
+	});
+	
+	
+	addProduct({
+		'id':'mw2',
+		'price': {
+			'usa':357,
+			'canada':407,
+			'arizona':389.31,
+			'australia':436,
+			'world':487
+		}
+	});
+
+	addProduct({
+		'id':'win',
+		'price': {
+			'usa':377,
+			'canada':407,
+			'arizona':411.12,
+			'australia':436,
+			'world':507
+		}
+	});
+	
+	addProduct({
+		'id':'mk3',
+		'price':{
+			'usa':567,
+			'canada':617,
+			'arizona':618.31,
+			'australia':697,
+			'world':697
+		}
+	});
+	
+	addProduct({
+		'id':'mac',
+		'price':{
+			'usa':647,
+			'canada':717,
+			'arizona':705.55,
+			'australia':817,
+			'world':817
+		}
+	});
+	
+	addProduct({
+		'id':'mk4',
+		'price':{
+			'usa':617,
+			'canada':667,
+			'arizona':672.84,
+			'australia':747,
+			'world':747
+		}
+	});
+	
+	addProduct({
+		'id':'m200',
+		'price':{
+			'usa':787,
+			'canada':837,
+			'arizona':858.22,
+			'australia':967,
+			'world':967
+		}
+	});
+	
+	addProduct({
+		'id':'m400',
+		'price':{
+			'usa':787,
+			'canada':867,
+			'arizona':858.22,
+			'australia':987,
+			'world':987
+		}
+	});
+	
+	addProduct({
+		'id':'mg4',
+		'price':{
+			'usa':897,
+			'canada':947,
+			'arizona':978.18,
+			'australia':1027,
+			'world':1027
+		}
+	});
+	
+	addProduct({
+		'id':'t154',
+		'price':{
+			'usa':377,
+			'canada':417,
+			'arizona':411.12,
+			'australia':507,
+			'world':507
+		}
+	});
+	
+	addProduct({
+		'id':'t304',
+		'price':{
+			'usa':437,
+			'canada':487,
+			'arizona':476.55,
+			'australia':567,
+			'world':567
+		}
+	});
+	
+	addProduct({
+		'id':'s154',
+		'price':{
+			'usa':247,
+			'canada':297,
+			'arizona':269.35,
+			'australia':367,
+			'world':367
+		}
+	});
+	
+	addProduct({
+		'id':'ac12',
+		'price':{
+			'usa':547,
+			'canada':597,
+			'arizona':596.50,
+			'australia':677,
+			'world':677
+		}
+	});
+	
+	addProduct({
+		'id':'im20',
+		'price':{
+			'usa':347,
+			'canada':397,
+			'arizona':378.40,
+			'australia':487,
+			'world':487
+		}
+	});
+	
+	addProduct({
+		'id':'im30',
+		'price':{
+			'usa':627,
+			'canada':677,
+			'arizona':683.74,
+			'australia':757,
+			'world':757
+		}
+	});
+	
+	//  this ends the coolers, now on to accessories
+	
+	addProduct({
+		'id':'p-c',
+		'price':{
+			'usa':29,
+			'canada':29,
+			'arizona':31.62,
+			'australia':29,
+			'world':29
+		},
+		
+		'fieldname': 'ACDac/dcpower',
+		
+		'goeswith': [
+			'mw1',
+			'mw2',
+			'mk3',
+			'mac',
+			'mk4',
+			'm200',
+			'm400',
+			'mg4'	
+		]
+		
+	});
+	
+	addProduct({
+		'id':'p-b',
+		'price':{
+			'usa':12,
+			'canada':12,
+			'arizona':13.09,
+			'australia':12,
+			'world':12
+		},
+		
+		'fieldname': 'WBL/2-1/2Gal',
+		
+		'goeswith': [
+			'mw1',
+			'mw2'
+		]
+		
+	});
+	
+	addProduct({
+		'id':'p-p',
+		'price':{
+			'usa':12,
+			'canada':12,
+			'arizona':13.09,
+			'australia':12,
+			'world':12
+		},
+		
+		'fieldname': 'MFPfilterpad',
+		
+		'goeswith': [
+			'mw1',
+			'mw2',
+			'mk3',
+			'mac',
+			'mk4',
+			'm200',
+			'm400',
+			'mg4',
+			't154',
+			't304',
+			's154',
+			'im20',
+			'im30'
+		]
+		
+	});
+
+
+	addProduct({
+		'id':'p-f2',
+		'price':{
+			'usa':47,
+			'canada':57,
+			'arizona':51.25,
+			'australia':67,
+			'world':67
+		},
+		
+		'fieldname': 'FH2TwoHose',
+		
+		'goeswith': [
+			'mw1',
+			'mw2',
+			'mk3',
+			'mac',
+			'mk4',
+			'm200',
+			'm400'
+			
+		]
+		
+	});
+	
+	addProduct({
+		'id':'p-f4',
+		'price':{
+			'usa':137,
+			'canada':147,
+			'arizona':149.40,
+			'australia':157,
+			'world':157
+		},
+		
+		'fieldname':'FH4FourHose',
+		
+		'goeswith': [
+			'mw2',
+			'mk3',
+			'mac',
+			'mk4',
+			'm200',
+			'm400'
+			
+		]
+		
+	});
+	
+	
+	
+	
+	
+	
+	
+	
+/**********************************************************************************
+*
+*
+*	STOP EDITING HERE
+*
+*
+**********************************************************************************/
+	
+	
+	
+	
+	
+	
+/*********************************************************************************
+*
+*	These functions come from dlite by Robert Nyman.  The library had been
+*	trimmed down to only what is needed here by John Beales
+*
+*
+*********************************************************************************/
+/*
+	Developed by Robert Nyman
+	Code/licensing: http://code.google.com/p/dlite/
+	Documentation: http://www.robertnyman.com/dlite
+	Version 1.0
+	
+	Trimmed for Swampy.net by John Beales http://johnbeales.com (December 16, 2010)
+*/	
+var dLite = function () {
+	var isIE = /*@cc_on!@*/false;
+	var uniqueHandlerId = 0;
+	var DOMLoaded = false;
+	var DOMLoadTimer = null;
+	var functionsToCall = [];
+	var addedStrings = {};
+	var execFunctions = function () {
+		for (var i=0, il=functionsToCall.length; i<il; i++) {
+			try {
+				functionsToCall[i]();
+			}
+			catch (e) {
+				// Prevent possible reference errors
+			}
+		}
+		functionsToCall = [];
+	};
+	var DOMHasLoaded = function () {
+		if (DOMLoaded) {
+			return;
+		}
+		DOMLoaded = true;
+		execFunctions();
+	};
+	return {
+		init : function () {
+			window.elm = window.elm || this.elm;
+	//		window.elmsByClass = window.elmsByClass || this.elmsByClass;
+	//		window.addClass = window.addClass || this.addClass;
+	//		window.removeClass = window.removeClass || this.removeClass;
+			window.addEvent = window.addEvent || this.addEvent;
+	//		window.removeEvent = window.removeEvent || this.removeEvent;
+	//		window.stopDefault = window.stopDefault || this.stopDefault;
+	//		window.cancelBubbling = window.cancelBubbling || this.cancelBubbling;
+			window.DOMReady = window.DOMReady || this.DOMReady;
+			
+			if (document.addEventListener) {
+				document.addEventListener("DOMContentLoaded", DOMHasLoaded, false);
+			}
+			if (isIE) {
+				if (document.getElementById) {
+					document.write("<script id=\"ieScriptLoad\" defer src=\"//:\"><\/script>");
+					document.getElementById("ieScriptLoad").onreadystatechange = function() {
+						if (this.readyState === "complete") {
+							DOMHasLoaded.call(this);
+						}
+					};
+				}
+			}
+			if (/KHTML|WebKit|iCab/i.test(navigator.userAgent)) {
+				DOMLoadTimer = setInterval(function () {
+					if (/loaded|complete/i.test(document.readyState)) {
+						DOMHasLoaded.call(this);
+						clearInterval(DOMLoadTimer);
+					}
+				}, 10);
+			}
+			window.onload = DOMHasLoaded;
+		},
+		
+		elm : function (id) {
+			return document.getElementById(id);
+		},
+		
+	
+		addEvent : function (elm, evt, func) {
+			if (document.addEventListener) {
+				this.addEvent = function (elm, evt, func) {
+					elm.addEventListener(evt, func, false);
+				};
+			}
+			else {
+				this.addEvent = function (elm, evt, func) {
+					if (!elm.uniqueHandlerId) {
+						elm.uniqueHandlerId = uniqueHandlerId++;
+					}
+					var alreadyExists = false;
+					if (func.attachedElements && func.attachedElements[evt + elm.uniqueHandlerId]) {
+						alreadyExists = true;
+					}
+					if (!alreadyExists) {
+						if (!elm.events) {
+							elm.events = {};
+						}
+						if (!elm.events[evt]) {
+							elm.events[evt] = [];
+							var existingEvent = elm["on" + evt];
+							if (existingEvent) {
+								elm.events[evt].push(existingEvent);
+							}
+						}
+						elm.events[evt].push(func);
+						elm["on" + evt] = dLite.handleEvent;
+						
+						if (!func.attachedElements) {
+							func.attachedElements = {};
+						}
+						func.attachedElements[evt + elm.uniqueHandlerId] = true;
+					}
+				};
+			}
+			return this.addEvent(elm, evt, func);
+		},
+		
+		handleEvent : function (evt) {
+			var currentEvt = evt || event;
+			var currentTarget = currentEvt.target || currentEvt.srcElement || document;
+			while (currentTarget.nodeType !== 1 && currentTarget.parentNode) {
+				currentTarget = currentTarget.parentNode;
+			}			
+			currentEvt.eventTarget = currentTarget;
+			var eventColl = this.events[currentEvt.type].slice(0);
+			var eventCollLength = eventColl.length - 1;
+			if (eventCollLength !== -1) {
+				for (var i=0; i<eventCollLength; i++) {
+					eventColl[i].call(this, currentEvt);
+				}
+				return eventColl[i].call(this, currentEvt);
+			}
+		},
+		
+		
+		DOMReady : function () {
+			for (var i=0, il=arguments.length, funcRef; i<il; i++) {
+				funcRef = arguments[i];
+				if (!funcRef.DOMReady && !addedStrings[funcRef]) {
+					if (typeof funcRef === "string") {
+						addedStrings[funcRef] = true;
+						funcRef = new Function(funcRef);
+					}
+					funcRef.DOMReady = true;
+					functionsToCall.push(funcRef);
+				}
+			}
+			if (DOMLoaded) {
+				execFunctions();
+			}
+		}
+	};
+}();
+dLite.init();
+
+/********************************************************************************
+*
+*	End dLite functions
+*
+*
+*
+*********************************************************************************/
+
+
+/*
+
+	Start most of the calculator code 
+	
+*/
+	
+	var f, dom = {}, shipzone = 'usa', external = {}, parthash = {};
+	
+	
+	
+	
+	/* helper functions  */
+	
+	// from : http://phpjs.org/functions/number_format:481
+	function number_format(number, decimals, dec_point, thousands_sep) {
+	    // Formats a number with grouped thousands  
+	    // 
+	    // version: 1009.2513
+	    // discuss at: http://phpjs.org/functions/number_format
+		// additional comments removed to save a tiny bit of bandwidth (@johnbeales)
+	
+	    number = (number+'').replace(',', '').replace(' ', '');
+	    var n = !isFinite(+number) ? 0 : +number, 
+	        prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+	        sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
+	        dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
+	        s = '',
+	        toFixedFix = function (n, prec) {
+	            var k = Math.pow(10, prec);
+	            return '' + Math.round(n * k) / k;
+	        };
+	    // Fix for IE parseFloat(0.55).toFixed(0) = 0;
+	    s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.');
+	    if (s[0].length > 3) {
+	        s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+	    }
+	    if ((s[1] || '').length < prec) {
+	        s[1] = s[1] || '';
+	        s[1] += new Array(prec - s[1].length + 1).join('0');
+	    }
+	    return s.join(dec);
+	}
+	
+	
+	
+
+	
+	// make a number look like a dollar value
+	function dollar(val) {
+		return number_format(val,2);
+	}
+	
+	
+	function inArray(val, array) {
+	
+		for(var i=0,len=array.length;i<len;i++) {
+			if(array[i] == val) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	
+	/**
+	Takes a URL with no protocol on it and prepends the appropriate http:// or https:// for the page.
+	*/
+	function protocol_url(url) {
+	
+		return  (("https:" == document.location.protocol) ? "https://" : "http://") + url;
+	
+	
+	}
+	
+	function isNumber(n) {
+	  return !isNaN(parseFloat(n)) && isFinite(n);
+	}
+	
+	
+	function collectionToArray(collection)  
+		{  
+		    var ary = [];  
+		    for(var i=0, len = collection.length; i < len; i++)  
+		    {  
+		        ary.push(collection[i]);  
+		    }  
+		    return ary;  
+		}  
+	
+	/* done helper functions  */
+	
+	
+	function geocode(address) {
+		var script, url, mapkey = 'ArRPmDLJaaPlX2oYwLxViZv-KGxNbX6_woi6vsw1up98tascQaAVbw4NL4jupsBS';
+	
+		url = 'dev.virtualearth.net/REST/v1/Locations?query=' + encodeURIComponent(address) + '&key=' + mapkey;
+		url += '&jsonp=' + encodeURIComponent('swampy_handlegeocoded');
+
+	
+		script = document.createElement("script");
+	  	script.type = "text/javascript";
+	  	script.src = protocol_url(url);
+	  	document.body.appendChild(script);	
+	
+	
+	
+	
+	}
+	
+	
+		
+	
+	external.handlegeocoded = function(results) {
+	
+//		console.log(results);
+		
+		var state, country, result = false;
+		
+		result = results.resourceSets[0].resources[0].address;
+		
+		
+		if(results.resourceSets) {
+			if(results.resourceSets.length > 0) {
+				if(results.resourceSets[0].resources) {
+					if(results.resourceSets[0].resources.length > 0) {
+						if(results.resourceSets[0].resources[0].address && results.resourceSets[0].resources[0].confidence == 'High') {
+							result = results.resourceSets[0].resources[0].address;
+						}
+					}
+				}
+			}
+		}
+		
+		
+		if(result) {
+			country = result.countryRegion;
+			state = result.adminDistrict;
+		
+       		if(country == 'United States') {
+       			if(state == 'AZ') {
+       				shipzone = 'arizona';
+       			} else if(state == 'AK' || state == 'HI') {
+       				shipzone = 'canada';
+       			} else {
+       				shipzone = 'usa';
+       			}
+       		} else if(country == 'Canada' || country == 'Puerto Rico') {
+       			shipzone = 'canada';
+       		} else if(country == 'Australia') {
+       			shipzone = 'australia';
+       		} else {
+       			shipzone = 'world';
+       		}  	
+       	}
+       	
+       	
+       	update(null);
+    }
+	
+	
+	
+	function updateAddressData(e) {
+	
+		var adrstr = '', execute = true;
+
+		if(dom.address.value.length == 0) {
+			execute = false;
+		} else {
+			adrstr += dom.address.value;
+		}
+		
+		if(dom.city.value.length == 0) {
+			execute = false;
+		} else {
+			adrstr += ', ' + dom.city.value;
+		}if(dom.state.value.length > 0) {
+  		adrstr += ', ' + dom.state.value;
+		}
+
+		if(dom.zip.value.length > 0) {
+  		adrstr += ', ' + dom.zip.value;
+		}
+
+
+		
+		if(execute) {
+    		geocode(adrstr);
+    	}
+  	}
+
+	
+	
+	
+	
+	
+	
+	function update(e) {
+		var current, total = 0, i, el, prod, hasPart = false, hasWarned = false;
+		
+		// for the main product, get the subtotal
+		if(dom.qty.value > 0 && dom.model.value != 'none') {
+			current = prods[dom.model.value];
+			total = current.price[shipzone] * dom.qty.value;
+		}
+		dom.itemprice.value = dollar(total);
+		
+		
+		for(i in parthash) {
+			el = elm(i);
+			
+			if(isNumber(el.value) && el.value > 0) {
+				prod = prods[parthash[i]];
+				total = total + (prod.price[shipzone] * el.value);
+				
+				if(!inArray(dom.model.value, prod.goeswith) && hasWarned == false && (typeof el.haswarned == 'undefined' || el.haswarned === null || el.haswarned == 0)) {
+					alert('Caution: This accessory is not compatible with the cooler that you have ordered.  Check to make sure you want to order it.');
+					hasWarned = true;
+					el.haswarned = 1;
+				}
+				
+				hasPart = true;
+				
+				
+			} else {
+				el.value = 0;
+				el.haswarned = 0;
+			}
+			
+		}
+		
+		// add shipping for accessories when not ordering a cooler
+		if(hasPart) {
+			if(!isNumber(dom.qty.value) || dom.qty.value == 0 || dom.model.value == 'none') {
+				total += 12
+			}
+		}
+		
+		
+		
+		
+		// print the grand total
+		dom.total.value	= dollar(total);
+	}
+	
+	
+	
+	
+	function initCalc() {
+	
+	
+		var ipts, sels;
+	
+		if(document.getElementsByTagName('form').length > 0) {
+			
+			f = document.getElementsByTagName('form')[0];
+			// get all input elements
+			ipts = f.getElementsByTagName('input');
+			// add any select elements to the array
+			
+			sels = f.getElementsByTagName('select');
+		
+			
+			// convert the two nodelists into arrays so they can be concatted
+			ipts = collectionToArray(ipts);
+			sels = collectionToArray(sels);
+			
+			
+			ipts = ipts.concat(sels);
+			// set the ID on all inputs & selects to be the same as the name
+			for(var i=0,len=ipts.length;i<len;i++){
+				ipts[i].setAttribute('id',ipts[i].getAttribute('name'));
+			}
+			
+			
+			dom.model = elm('Model');
+			dom.qty = elm('Qty');
+			dom.itemprice = elm('Product$');
+			dom.total = elm('amtauthrizd');
+			
+			dom.address = elm('Address');
+			dom.city = elm('City');
+			dom.state = elm('State');
+			dom.zip = elm('Zip');
+			dom.country = elm('country');
+			
+			
+			for(var i=0 in prods) {
+				if(prods[i].fieldname) {
+					parthash[prods[i].fieldname] = i;
+					addEvent(elm(prods[i].fieldname), 'change', update);
+				}
+			}
+			
+			// add some eventhandlers
+			addEvent(dom.model,'change',update);
+			addEvent(dom.qty,'change',update);
+			
+			
+			// set some event handlers
+			addEvent(dom.address, 'change', updateAddressData);
+			addEvent(dom.city, 'change', updateAddressData);
+			addEvent(dom.state, 'change', updateAddressData);
+			addEvent(dom.zip, 'change', updateAddressData);
+			addEvent(dom.country, 'change', updateAddressData);
+			
+			updateAddressData(null);
+
+			
+			
+			update(null);
+			
+			
+			window.swampy = external;
+			window.swampy_handlegeocoded = external.handlegeocoded;
+			
+			loadMapScript();
+		
+		
+		}
+	
+	
+	
+	}
+	
+	
+	
+
+
+	DOMReady(initCalc);
+
+
+
+
+
+
+
+
+})();
+
+}
+/*
+     FILE ARCHIVED ON 15:01:53 Aug 16, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 15:28:36 Apr 16, 2025.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.724
+  exclusion.robots: 0.028
+  exclusion.robots.policy: 0.012
+  esindex: 0.012
+  cdx.remote: 13.387
+  LoadShardBlock: 427.522 (3)
+  PetaboxLoader3.datanode: 200.835 (4)
+  PetaboxLoader3.resolve: 433.741 (2)
+  load_resource: 216.579
+*/
