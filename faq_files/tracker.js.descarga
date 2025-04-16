@@ -1,0 +1,102 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+<!--
+tracker_loaded = 1;
+function make_stats_now(acc,path) {         // make statistics
+    var ws_key = new Array();               // names of the fields
+    var ws_val = new Array();               // values of the fields
+    var tag=args=i='';
+    if(typeof(screen) != 'undefined'){      // getting screen data if possible
+        ws_key[2] = 'screen_w';     ws_val[2] = screen.width;
+        ws_key[3] = 'screen_h';     ws_val[3] = screen.height;
+        ws_key[4] = 'pixel_depth';  ws_val[4] = screen.pixelDepth;
+        if(typeof(screen.pixelDepth) == 'undefined'){
+            ws_val[4] = screen.colorDepth;
+        };
+    };
+    ws_key[0] = 'username';     ws_val[0] = acc;
+    ws_key[5] = 'java';         ws_val[5] = '';
+    if(typeof(navigator.javaEnabled) != 'undefined'){
+        ws_val[5] = (navigator.javaEnabled()?'enabled':'disabled');
+    };
+    document.cookie = 'WS2cookies=Y';
+    ws_key[7] = 'cookies';      ws_val[7] = (document.cookie ? 'enabled' : 'disabled');
+    ws_key[8] = 'referrer';  	ws_val[8] = '';
+    if(typeof(document.referrer) != 'undefined'){
+        ws_val[8] = document.referrer;
+        if(!ws_val[8]) {
+            ws_val[8] = 'direct/bookmark';
+        };
+    };
+    ws_key[9] = 'top_referrer'; ws_val[9] = '';
+    if(typeof(top.document.referrer) != 'undefined'){
+        ws_val[9] = top.document.referrer;
+        if(!ws_val[9]) {
+            ws_val[9] = 'direct/bookmark';
+        };
+    };
+    ws_key[12] = 'url';         ws_val[12] = window.location.href;
+    ws_key[16] = 'browser_name';ws_val[16] = navigator.appName;
+    ws_key[19] = 'time_zone';   ws_val[19] = '';       // what is the GMT zone
+    if(typeof(Date) != 'undefined') {
+        now = new Date();
+        ws_val[19] = now.getTimezoneOffset();
+        ws_val[19] = -ws_val[19] / 60;
+    };
+    ws_key[22] = 'title';       ws_val[22] = document.title.substr(0,50);
+    ws_key[25] = 'plugins';     ws_val[25] = '';
+    var plugins_number = 0;
+    if(typeof(navigator.plugins.length) != 'undefined'){
+        plugins_number = navigator.plugins.length;
+    };
+    for (i = 0; i < plugins_number; ++i) {          // concat plugins in an array
+        ws_val[25] += navigator.plugins[i].name + ';';
+    };
+
+    for (i = 0; i < ws_key.length; ++i) {           // concat all field names and values
+        if((typeof(ws_key[i]) != 'undefined') && (typeof(ws_val[i]) != 'undefined')) {
+            args += escape(ws_key[i]) + "=" + escape(ws_val[i]) + '&';
+        };
+    };
+    return '<A ' + 'HREF="' + path +'?NAVG=Linker&username='+acc+'" target="_top"><IMG' +
+     ' SRC="' + path + '?NAVG=Tracker&'+ args + 
+     '" ALT="Click here for more detailed statistical reports about this web page!"'+
+     ' BORDER=0></A>';
+};
+
+//-->
+
+
+
+
+}
+/*
+     FILE ARCHIVED ON 23:08:46 Aug 10, 2004 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 15:20:01 Apr 16, 2025.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.559
+  exclusion.robots: 0.022
+  exclusion.robots.policy: 0.01
+  esindex: 0.01
+  cdx.remote: 72.953
+  LoadShardBlock: 72.473 (3)
+  PetaboxLoader3.datanode: 135.002 (4)
+  load_resource: 213.976
+  PetaboxLoader3.resolve: 118.976
+*/
